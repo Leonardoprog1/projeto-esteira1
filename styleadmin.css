@@ -1,4 +1,4 @@
-/* Reset e base */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,136 +6,159 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+  min-height: 100vh;
 }
 
 /* Header */
 header {
-  background-color: #0056b3;
-  padding: 20px;
-  color: white;
+  background: #1a237e;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 header .container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 header h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
 }
 
 nav a {
-  color: white;
-  margin-left: 20px;
+  color: #fff;
   text-decoration: none;
+  margin-left: 24px;
   font-weight: 500;
-  font-size: 1rem;
+  transition: color 0.2s;
 }
 
 nav a:hover {
-  
   color: #ffb300;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
-  background: linear-gradient(to right, #0056b3, #007bff);
-  color: white;
-  padding: 60px 20px;
   text-align: center;
+  padding: 40px 20px 20px 20px;
+  background: #e8eaf6;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
+  color: #1a237e;
 }
 
 .hero p {
   font-size: 1.1rem;
+  color: #333;
 }
 
-/* Cards container */
+/* Formulário */
 .cards {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
-  padding: 40px 20px;
+  padding: 30px 0;
 }
 
-/* Card individual */
 .card {
-  background: white;
+  background: #fff;
   border-radius: 12px;
-  padding: 24px;
+  box-shadow: 0 4px 24px rgba(26,35,126,0.08);
+  padding: 32px 24px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.card:hover {
-    box-shadow: 0 8px 32px rgba(26, 35, 126, 0.15);
-    border-color: #ffb300;
+  min-height: 400px; /* altura mínima para todos ficarem iguais */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch; /* garante que todos inputs ocupem a largura */
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .card h3 {
-  font-size: 1.4rem;
-  color: #0056b3;
+  color: #1a237e;
   margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
-.card p {
-  margin-bottom: 16px;
-  font-size: 1rem;
-  color: #444;
+/* Padronize todos os inputs, textarea e botão */
+.card input,
+.card textarea,
+.card button {
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.card a {
-  display: inline-block;
-  background-color: #0056b3;
-  color: white;
-  padding: 10px 18px;
+.card input,
+.card textarea {
+  padding: 12px;
+  border: 1px solid #c5cae9;
   border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
 }
 
-.card a:hover {
-  background-color: linear-gradient(90deg, #ffb300 60%, #ffd54f 100%) ;
-   color: #ffb300;
-   transform: translateY(-2px) scale(1.03);
+.card input:focus,
+.card textarea:focus {
+  border-color: #1a237e;
+}
+
+.card label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.button {
+  background: #1a237e;
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #3949ab;
 }
 
 /* Footer */
 footer {
-  background: #f0f0f0;
-  padding: 20px;
+  background: #1a237e;
+  color: #fff;
   text-align: center;
-  font-size: 0.9rem;
-  color: #333;
+  padding: 18px 0;
+  margin-top: 40px;
+  font-size: 1rem;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
+/* Responsividade */
+@media (max-width: 700px) {
   header .container {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0 16px;
   }
-
-  nav {
-    margin-top: 10px;
+  .card {
+    padding: 20px 10px;
   }
-
-  nav a {
-    margin: 5px 10px 5px 0;
-    display: inline-block;
+  .cards {
+    padding: 16px 0;
   }
- 
 }

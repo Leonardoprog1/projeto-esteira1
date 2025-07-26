@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ENIAC LINK+ | Processo Seletivo Virtual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #0056b3;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0056b3, #007bff);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+    }
+
+    /* Carrossel base */
+    .carousel-wrapper {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      scroll-snap-align: center;
+      flex: 0 0 90%;
+      max-width: 90%;
+      border-radius: 12px;
+      color: white;
+      position: relative;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .card a {
+      background: rgba(255, 255, 255, 0.9);
+      color: #0056b3;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    /* Responsivo - Desktop */
+    @media (min-width: 900px) {
+      .carousel-wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: visible;
+      }
+
+      .card {
+        flex: 0 0 300px;
+        max-width: 300px;
+      }
+    }
+
+    footer {
+      background: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>ENIAC LINK+</h2>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="vagas.html">Vagas</a>
+      <a href="admin.html">RH</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Processo Seletivo Virtual</h1>
+    <p>Conectando você às melhores oportunidades de forma rápida, moderna e online.</p>
+  </section>
+
+  <section class="carousel-wrapper">
+    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1586281380349-632531db7ed5');">
+      <h3>🚀 Cadastro</h3>
+      <p>Envie seus dados e currículo em poucos minutos pela nossa plataforma.</p>
+      <a href="cadastro.html">Cadastrar</a>
+    </div>
+
+    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');">
+      <h3>🔍 Vagas Abertas</h3>
+      <p>Veja todas as vagas disponíveis e encontre a ideal para seu perfil.</p>
+      <a href="vagas.html">Ver Vagas</a>
+    </div>
+
+    <div class="card" style="background-image: url('https://images.unsplash.com/photo-1601597111158-6fc9b4c7e9c5');">
+      <h3>🎥 Entrevistas Online</h3>
+      <p>Participe de entrevistas por vídeo chamadas de forma rápida e prática.</p>
+      <a href="cadastro.html#entrevista">Agendar</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ENIAC LINK+ — Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

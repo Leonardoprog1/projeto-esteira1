@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro | ENIAC LINK+</title>
+  <link rel="stylesheet" href="stylecadastro.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h2>ENIAC LINK+</h2>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="admin.html">RH</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Cadastro de Candidato(a)</h1>
+    <p>Participe do processo seletivo de forma rápida e online.</p>
+  </section>
+
+  <section class="cards" style="flex-direction: column; align-items: center;">
+    <form id="formCadastro" style="width: 100%; max-width: 600px;" enctype="multipart/form-data">
+      <div class="card">
+        <h3>Preencha seus dados</h3>
+        <input type="text" name="nome" placeholder="Nome completo" required />
+        <input type="email" name="email" placeholder="E-mail" required />
+        <input type="tel" name="telefone" placeholder="Telefone (WhatsApp)" required />
+        <input type="text" name="vaga" placeholder="Vaga de interesse" required />
+        <textarea name="disponibilidade" placeholder="Disponibilidade para entrevista" required></textarea>
+        <label>Currículo (PDF):</label>
+        <input type="file" name="curriculo" accept="application/pdf" required />
+        <button type="submit" class="button">Enviar Cadastro</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ENIAC LINK+ — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('formCadastro').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert("Cadastro enviado com sucesso! (simulado)");
+      window.location.href = "confirmacao.html";
+    });
+  </script>
+</body>
+</html>
